@@ -1,3 +1,20 @@
+## Screenshots
+
+<img alt="" src="screenshot/ezlooper_1.gif"/>
+<br>
+<img alt="" src="screenshot/ezlooper_2.gif"/>
+<br>
+<img alt="" src="screenshot/ezlooper_3.gif"/>
+<br>
+<img alt="" src="screenshot/ezlooper_4.gif"/>
+<br>
+
+## Installation
+
+Just grab one of the installers.
+Press F1 in the application to understand its workings.
+Make looppoints using an capable wave editor (like wavosaur)
+
 ## what is it?
 
 EZ Looper is an application build for dj's and livemusicians, originally intended to control it with the MIDIMAN DM2 controller (still works). Its build in 100% pure C++. Basically its just a djplayer with :
@@ -19,16 +36,10 @@ First of all, I wasn't satisfied with the software which came with my mixman dm2
 
 The main focus is that you should be able to dj with your eyes closed. A lot of djplayers/sequencers have complex interfaces with tiny fonts, dangerous complex MIDI-options. The workflow should be : get on stage,start your laptop+program, close your laptop.
 
-## Screenshots
+## Building the source
 
-<img alt="" src="screenshot/ezlooper_1.gif"/>
-<br>
-<img alt="" src="screenshot/ezlooper_2.gif"/>
-<br>
-<img alt="" src="screenshot/ezlooper_3.gif"/>
-<br>
-<img alt="" src="screenshot/ezlooper_4.gif"/>
-<br>
+It was compiled with DevCpp (see projectfiles in /prj).
+But it should compile eventually in any mingw compiler.
 
 ## Note
 
