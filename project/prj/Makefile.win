@@ -1,0 +1,84 @@
+# Project: EZ Looper GUI
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = ../obj/EZ_Looper_GUI_private.res
+OBJ  = ../obj/ezchannel.o ../obj/ezcontrol.o ../obj/ezfmod.o ../obj/ezfx.o ../obj/ezlooper.o ../obj/ezmidiin.o ../obj/ezsettings.o ../obj/eztrack.o ../obj/main_gui.o ../obj/RtMidi.o ../obj/sine.o ../obj/EZgui.o ../obj/BitStream.o ../obj/GifDecoder.o ../obj/font.o ../obj/spectrum.o ../obj/iniFile.o ../obj/PixelToaster.o $(RES)
+LINKOBJ  = ../obj/ezchannel.o ../obj/ezcontrol.o ../obj/ezfmod.o ../obj/ezfx.o ../obj/ezlooper.o ../obj/ezmidiin.o ../obj/ezsettings.o ../obj/eztrack.o ../obj/main_gui.o ../obj/RtMidi.o ../obj/sine.o ../obj/EZgui.o ../obj/BitStream.o ../obj/GifDecoder.o ../obj/font.o ../obj/spectrum.o ../obj/iniFile.o ../obj/PixelToaster.o $(RES)
+LIBS =  -L"lib" -L"g:/sqz_coding/libs/fmod/api/lib" -mwindows -lgdi32 -lfmodex -lwinmm -ld3d9  
+INCS =  -I"include"  -I"g:/sqz_coding/libs/PixelToaster-1.4"  -I"g:/sqz_coding/libs/fmod/api/inc" 
+CXXINCS =  -I"lib/gcc/mingw32/3.4.2/include"  -I"include/c++/3.4.2/backward"  -I"include/c++/3.4.2/mingw32"  -I"include/c++/3.4.2"  -I"include"  -I"g:/sqz_coding/libs/PixelToaster-1.4"  -I"g:/sqz_coding/libs/fmod/api/inc" 
+BIN  = ../bin/ezlooper.exe
+CXXFLAGS = $(CXXINCS)   -fexpensive-optimizations -O3
+CFLAGS = $(INCS)   -fexpensive-optimizations -O3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../bin/ezlooper.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "..\bin\ezlooper.exe" $(LIBS)
+
+../obj/ezchannel.o: ../src/ezlooper/ezchannel.cpp
+	$(CPP) -c ../src/ezlooper/ezchannel.cpp -o ../obj/ezchannel.o $(CXXFLAGS)
+
+../obj/ezcontrol.o: ../src/ezlooper/ezcontrol.cpp
+	$(CPP) -c ../src/ezlooper/ezcontrol.cpp -o ../obj/ezcontrol.o $(CXXFLAGS)
+
+../obj/ezfmod.o: ../src/ezlooper/ezfmod.cpp
+	$(CPP) -c ../src/ezlooper/ezfmod.cpp -o ../obj/ezfmod.o $(CXXFLAGS)
+
+../obj/ezfx.o: ../src/ezlooper/ezfx.cpp
+	$(CPP) -c ../src/ezlooper/ezfx.cpp -o ../obj/ezfx.o $(CXXFLAGS)
+
+../obj/ezlooper.o: ../src/ezlooper/ezlooper.cpp
+	$(CPP) -c ../src/ezlooper/ezlooper.cpp -o ../obj/ezlooper.o $(CXXFLAGS)
+
+../obj/ezmidiin.o: ../src/ezlooper/ezmidiin.cpp
+	$(CPP) -c ../src/ezlooper/ezmidiin.cpp -o ../obj/ezmidiin.o $(CXXFLAGS)
+
+../obj/ezsettings.o: ../src/ezlooper/ezsettings.cpp
+	$(CPP) -c ../src/ezlooper/ezsettings.cpp -o ../obj/ezsettings.o $(CXXFLAGS)
+
+../obj/eztrack.o: ../src/ezlooper/eztrack.cpp
+	$(CPP) -c ../src/ezlooper/eztrack.cpp -o ../obj/eztrack.o $(CXXFLAGS)
+
+../obj/main_gui.o: ../src/main_gui.cpp
+	$(CPP) -c ../src/main_gui.cpp -o ../obj/main_gui.o $(CXXFLAGS)
+
+../obj/RtMidi.o: ../src/util/RtMidi/RtMidi.cpp
+	$(CPP) -c ../src/util/RtMidi/RtMidi.cpp -o ../obj/RtMidi.o $(CXXFLAGS)
+
+../obj/sine.o: ../src/util/sine.cpp
+	$(CPP) -c ../src/util/sine.cpp -o ../obj/sine.o $(CXXFLAGS)
+
+../obj/EZgui.o: ../src/gui/EZgui.cpp
+	$(CPP) -c ../src/gui/EZgui.cpp -o ../obj/EZgui.o $(CXXFLAGS)
+
+../obj/BitStream.o: ../src/gui/BitStream.cpp
+	$(CPP) -c ../src/gui/BitStream.cpp -o ../obj/BitStream.o $(CXXFLAGS)
+
+../obj/GifDecoder.o: ../src/gui/GifDecoder.cpp
+	$(CPP) -c ../src/gui/GifDecoder.cpp -o ../obj/GifDecoder.o $(CXXFLAGS)
+
+../obj/font.o: ../src/gui/font.cpp
+	$(CPP) -c ../src/gui/font.cpp -o ../obj/font.o $(CXXFLAGS)
+
+../obj/spectrum.o: ../src/gui/spectrum.cpp
+	$(CPP) -c ../src/gui/spectrum.cpp -o ../obj/spectrum.o $(CXXFLAGS)
+
+../obj/iniFile.o: ../src/ezlooper/iniFile.cpp
+	$(CPP) -c ../src/ezlooper/iniFile.cpp -o ../obj/iniFile.o $(CXXFLAGS)
+
+../obj/PixelToaster.o: ../../../libs/PixelToaster-1.4/PixelToaster.cpp
+	$(CPP) -c ../../../libs/PixelToaster-1.4/PixelToaster.cpp -o ../obj/PixelToaster.o $(CXXFLAGS)
+
+../obj/EZ_Looper_GUI_private.res: EZ_Looper_GUI_private.rc ../src/gui/configuration.rc 
+	$(WINDRES) -i EZ_Looper_GUI_private.rc --input-format=rc -o ../obj/EZ_Looper_GUI_private.res -O coff 

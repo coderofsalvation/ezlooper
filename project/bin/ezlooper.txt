@@ -1,0 +1,60 @@
+::::::  E Z   L O O P E R   S Y S T E M  v.1.0
+::::::  
+::::::  author	: sqz/LeonDuStar ( ezloopaz.com / www.leondustar.nl )
+::::::  contact : leon [at] boompje [dot] com
+::::::  date	: somewhere in 2008
+::::::  function: very minimalistic live looptool aimed for speed & midi
+
+[what is it?]
+The EZ Looper System is a application build for dj's and livemusicians, aimed
+to control it with the MIDIMAN DM2 controller.
+Basically its just a djplayer with some nice loopfunctions & MIDI-support.
+It can play mp3/wav files just like any other cdplayer in the clubscene.
+Also, loopregions can be triggered so tracks can go beyond its linear character.
+All this can be controlled by just a simple PC keyboard or a midicontroller 
+(Preferred is the MIDIMAN DM2 together with P.Doom's DM2MIDI tool because that's
+how this app started).
+
+[Why?...why would you make ANOTHER djplayer ?]
+When a producer/dj designs his liveset, sometimes sticking with minimalistic stuff
+can make things more pleasant. After trying zillions of dj-players, I concluded that
+it was better to redirect this energy towards building a minimalistic player.
+
+[Ok...but what is the focus of this djplayer?]
+The main focus is that you should be able to get drunk, and still be able to do an
+incredible liveset. There is no user interface, because that shifted to the DM2 midi controller.
+A lot of djplayers/sequencers have complex interfaces with tiny fonts, dangerous 
+complex MIDI-options, while the performance should be main focus and not all kinda 
+technical satisfact-your-ego-features.
+The workflow should be : get on stage,start your laptop+program, close your laptop and party!
+
+[Troubleshooting]
+- try to delete the 'ezloopaz.cfg'. Because that's where all the soundcard/midi settings are stored.
+
+[keyboard shortcuts]
+   
+  key    			      | event
+-------------------------------------------------------------------
+   p					play
+   s					stop
+   q					quit application
+   + / - 				pitch up/down
+   up/down arrow			pitch bend up/down
+   1,2,3,4,5,6,7,8,9			activate loopPoint
+
+
+
+[midi assignments]
+
+channel  | note			      | event
+-------------------------------------------------------------------
+   1     |  80                        | enable wheels to set pitch
+   1     |  0,1,2		      | stop, play, nextfile
+   1     |  38,39		      |	select track A/B
+
+
+channel  | ctrl			      | event
+-------------------------------------------------------------------
+   1	 | 67,66,65,64,63,62,61,60    | loopPoints for deck A
+   1     | 75,74,73,72,71,70,69,68    | loopPoints for deck B   
+   1     | 12,13		      |	pitch/pitchbend control

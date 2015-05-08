@@ -1,0 +1,26 @@
+#define IDC_DLG 1000
+#define IDC_MIDI 1001
+#define IDC_AUDIO_1 1002
+#define IDC_AUDIO_2 1003
+#define IDC_STC1 1004
+#define IDC_STC2 1005
+#define IDC_STC3 1006 
+#define IDC_BTN1 1007
+#define IDC_STC 1008
+#define IDC_CHK1 1009
+IDC_DLG DIALOGEX 6,5,198,156
+CAPTION "EZ Looper - configuration"
+FONT 8,"MS Sans Serif"
+STYLE 0x10C10000
+EXSTYLE 0x00000000
+BEGIN
+  CONTROL "",IDC_MIDI,"ComboBox",0x50010003,62,42,130,411,0x00000000
+  CONTROL "",IDC_AUDIO_1,"ComboBox",0x50010003,62,66,130,411,0x00000000
+  CONTROL "",IDC_AUDIO_2,"ComboBox",0x50010003,62,88,130,411,0x00000000
+  CONTROL "Select MIDI-IN",IDC_STC1,"Static",0x50000000,6,46,52,11,0x00000000
+  CONTROL "Select AUDIO 1",IDC_STC2,"Static",0x50000000,4,68,52,11,0x00000000
+  CONTROL "Select AUDIO 2",IDC_STC3,"Static",0x50000000,4,90,52,11,0x00000000
+//  CONTROL "use 'AUDIO 2' as headphone",IDC_CHK1,"Button",0x50010003,62,108,128,13,0x00000000
+  CONTROL "OK",IDC_BTN1,"Button",0x50010000,62,134,54,15,0x00000000
+  CONTROL "note : this dialog will save settings to 'ezlooper.ini'. So you have to configure this only once. Delete this file to get this popup again.",IDC_STC,"Static",0x50000000,6,3,186,24,0x00000000
+END
